@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jtr_LED_Project_v1.23</title>
+<style>
+body {
+background-color:gray;
+}
+
+h1 {
+color:maroon;
+font-size:40px;
+font-family:"Lucida Console", Monaco, monospace;
+background-color:#6495ed;
+}
+
+hr {
+color:navy;
+}
+
+p {
+font-size:20px;
+margin-left:15px;
+}
+
+a:link    {color:green;}
+a:visited {color:yellow;}
+a:hover   {color:red;background-color:black;}
+a:active  {color:blue;}
+
+div.led
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+
+}
+
+div.led0
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+background-color: green;
+margin:0px;
+
+}
+
+div.led1
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+background-color: blue;
+margin:0px;
+
+}
+
+div.led2
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+background-color: red;
+margin:0px;
+
+}
+
+div.led3
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+background-color: orange;
+margin:0px;
+
+}
+
+div.off
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+background-color: #282828;
+color: white;
+margin:0px;
+
+}
+</style>
+</head>
+
+<body>
+
+<h1>Jason and Melissa's Color Changing Bed</h1>
+<hr />
+
+<div onclick="location.href='http://192.168.1.234';" style="cursor:pointer;" class="led">choose wisely, muthafucker!</div>
+
+<hr />
+<div onclick="location.href='http://192.168.1.234/?click=0';" style="cursor:pointer;" class="led0">GREEN</div>
+
+<hr />
+<div onclick="location.href='http://192.168.1.234/?click=1';" style="cursor:pointer;" class="led1">BLUE</div>
+
+<hr />
+<div onclick="location.href='http://192.168.1.234/?click=2';" style="cursor:pointer;" class="led2">RED</div>
+
+<hr />
+<div onclick="location.href='http://192.168.1.234/?click=3';" style="cursor:pointer;" class="led3">ORANGE</div>
+
+<hr />
+<div onclick="location.href='http://192.168.1.234/?click=4';" style="cursor:pointer;" class="off">OFF</div>
+
+</body>
+</html>
