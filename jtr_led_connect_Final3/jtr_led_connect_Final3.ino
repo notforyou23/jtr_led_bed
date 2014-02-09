@@ -4,14 +4,14 @@
 
 #define PIN 6
 
-// Parameter 1 = number of pixels in strip
+// Parameter 1 = numbejtr_led_connect_Final3r of pixels in strip
 // Parameter 2 = pin number (most are valid)
 // Parameter 3 = pixel type flags, add together as needed:
 //   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
 //   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(240, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(380, PIN, NEO_GRB + NEO_KHZ800);
 
 boolean reading = false;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
@@ -62,61 +62,127 @@ void checkForClient() {
  client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println();
-          client.print("<header><body bgcolor=#FFFFFF><h1><c><div style=color:#2B3856><font size=+5><font face=helvetica><left>jtr_LED_Connect v0.23</font></h1>");
-          client.print("<left><div style=width:65%;height:2px;background:#232323;></div>");
+          client.print("<header><body bgcolor=gray>");
+          client.print("<div style=color:#FFFFFF;width:960px;padding:5px;border:5px;margin:0px><font size=+7><center><font face=helvetica>J&M LED_BEDv.23</font></center></div>");
+          client.print("<div style=width:960px;height:2pxbackground:white;border:0px;margin:0px></div>");
+                  
+                   client.print("<hr>");
+                            client.print("<hr>");
 
      //green     
-          client.print("<div style=width:65%;height:2px;background:#232323;></div>");
-          client.print("<br><center>");
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#33CC00;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>");
           client.print("<form METHOD=get action=\"");
 
           client.println("\">");
           client.println("<input type=hidden name=click value=0>");
-          client.println("<input type=submit value=\"GrEeN\"></form>"); 
-          client.print("<p></center>");
+          client.println("<input type=submit value=\"GREEN\"></form>"); 
+          client.print("<p></center></div>");
           
-        //rainbowcycle  
-          client.print("<div style=width:65%;height:2px;background:#232323;></div>");
-          client.print("<br><center>");
+                    client.print("<hr>");
+                             client.print("<hr>");
+          
+        //blue  
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#0000FF;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>");
           client.print("<form METHOD=get action=\"");
  
           client.println("\">");
           client.println("<input type=hidden name=click value=1>");
-          client.println("<input type=submit value=\"RaIN\"></form>"); 
-          client.print("<p></center>");
+          client.println("<input type=submit value=\"BLUE\"></form>"); 
+          client.print("<p></center></div>");
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
           
         //orange
-          client.print("<div style=width:65%;height:2px;background:#232323;></div>");
-          client.print("<br><center>");
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#FF9933;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
           client.print("<form METHOD=get action=\"");
  
           client.println("\">");
           client.println("<input type=hidden name=click value=2>");
-          client.println("<input type=submit value=\"OrAnGE\"></form>"); 
-          client.print("<p></center>");  
+          client.println("<input type=submit value=\"ORANGE\"></form>"); 
+          client.print("<p></center></div>");  
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
           
           
-        //blue
-          client.print("<div style=width:65%;height:2px;background:#232323;></div>");
-          client.print("<br><center>");
+        //purple
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#CC00FF;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
           client.print("<form METHOD=get action=\"");
 
           client.println("\">");
           client.println("<input type=hidden name=click value=3>");
-          client.println("<input type=submit value=\"BlUE\"></form>"); 
-          client.print("<p></center>");  
+          client.println("<input type=submit value=\"PURPLE\"></form>"); 
+          client.print("<p></center></div>");
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
+                    
+        //white
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#FFFFFF;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
+          client.print("<form METHOD=get action=\"");
+ 
+          client.println("\">");
+          client.println("<input type=hidden name=click value=5>");
+          client.println("<input type=submit value=\"WHITE\"></form>"); 
+          client.print("<p></center></div>");
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
+          
+        //rainbow
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#D8F5A7;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
+          client.print("<form METHOD=get action=\"");
+ 
+          client.println("\">");
+          client.println("<input type=hidden name=click value=6>");
+          client.println("<input type=submit value=\"RAINBOW\"></form>"); 
+          client.print("<p></center></div>");
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
+          
+          //rainbowcycle
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#8F00FF;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
+          client.print("<form METHOD=get action=\"");
+ 
+          client.println("\">");
+          client.println("<input type=hidden name=click value=7>");
+          client.println("<input type=submit value=\"RAINBOW~CYCLE\"></form>"); 
+          client.print("<p></center></div>");
+          
+                   client.print("<hr>");
+                            client.print("<hr>");
+                                     client.print("<hr>");
+                                              client.print("<hr>");
           
         //off
-                  client.print("<div style=width:65%;height:2px;background:#232323;></div>");
-          client.print("<br><center>");
+          client.print("<div style=width:960px;height:150px;padding:5px;background:#000000;border:5px;margin:3px;border-radius:25px>");
+          client.print("<center>"); 
           client.print("<form METHOD=get action=\"");
 
           client.println("\">");
           client.println("<input type=hidden name=click value=4>");
           client.println("<input type=submit value=\"OFF\"></form>"); 
-          client.print("<p></center>");
+          client.print("<p></center></div>");
+          client.print("<div style=width:960px;background:white;border:0px;margin:3px;border-radius:25px></div>");
           
-  delay(30);  //maybe remove - changed from 300
+                   client.print("<hr>");
+                            client.print("<hr>");
+                                     client.print("<hr>");
+                                              client.print("<hr>");
+                                                       client.print("<hr>");
+                                                       
+         client.print("<p>jason t regina 2013.  peace.  _ <p>");
+          
+  //delay(30);  //maybe remove - changed from 300
           
           sentHeader = true;
         }
@@ -131,7 +197,7 @@ void checkForClient() {
             break;
           }
           if(c == '1') {
-           rainbow(0);  //Rainbow
+           colorWipe(strip.Color(0, 0, 255), 0); // Blue
            break;
           }
           if(c == '2') {
@@ -139,12 +205,30 @@ void checkForClient() {
            break;
           }
           if(c == '3') {
-           colorWipe(strip.Color(0, 0, 255), 0); // Blue
+           colorWipe(strip.Color(200, 0, 255), 0); // Purple
            break;
           }
            if(c == '4') {
             colorWipe(strip.Color(0, 0, 0), 0); // off 
            break;
+        }
+           if(c == '5') {
+            colorWipe(strip.Color(224, 224, 224), 0); // white 
+           break; 
+           }
+           if(c == '6') {
+           rainbow(0); //rainbow
+           delay(10);
+           break;
+           }
+           if(c == '7') {
+           rainbowCycle(0); //rainbowcycle
+           delay(5);
+           rainbowCycle(0);
+           delay(5);
+           rainbowCycle(0);
+           break;
+           
         }
     }
          if (c == '\n' && currentLineIsBlank)  break;
@@ -209,4 +293,3 @@ uint32_t Wheel(byte WheelPos) {
 
 
 }
-
